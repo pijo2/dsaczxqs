@@ -7,6 +7,12 @@
     "verification": "https://youtu.be/AHBugaedvyA",
     "percentToQualify": "100",
     "password": "Free To Copy",
-    "records": [
+    "records": [ 
+        {
+            "user": "Krzak",
+            "link": "https://youtu.be/qea5wWAZfmU",
+            "percent": 100,
+            "hz": 144
+        }
     ]
 }
