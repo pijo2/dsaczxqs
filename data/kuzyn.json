@@ -25,6 +25,12 @@
             "link": "https://www.youtube.com/watch?v=dc-7N6oKogs",
             "percent": 100,
             "hz": 144
+        },
+         {
+            "user": "Mateusz001",
+            "link": "https://www.youtube.com/watch?v=Z18e00iUO8U",
+            "percent": 100,
+            "hz": 240
         }
     ]
 }
