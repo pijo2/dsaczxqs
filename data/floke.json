@@ -8,5 +8,11 @@
     "percentToQualify": "100",
     "password": "Free To Copy",
     "records": [
+        {
+            "user": "Mateusz001",
+            "link": "www.youtube.com/watch?v=rkH3b2cphTA&pp=0gcJCb4JAYcqIYzv",
+            "percent": 100,
+            "hz": 240
+        }
     ]
 }
