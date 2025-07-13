@@ -12,13 +12,19 @@
             "user": "Krzak",
             "link": "https://youtu.be/XvRs0VUUILY",
             "percent": 100,
-            "hz": 144
+            "hz": 240
         },
          {
             "user": "yen",
             "link": "https://youtu.be/7oTPiYvhVls",
             "percent": 100,
-            "hz": 144
+            "hz": 240
+        },
+         {
+            "user": "beli",
+            "link": "https://www.youtube.com/watch?v=5H1EohWIjPo",
+            "percent": 100,
+            "hz": 288
         }
     ]
 }
