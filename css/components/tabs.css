@@ -26,5 +26,5 @@
 }
 
 .tabs .tab:hover{
-    background-color: var(--custom-prop, #262626);
+    background-color: var(--color-on-background-hover);
 }
