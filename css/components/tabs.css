@@ -9,7 +9,7 @@
     padding: 1rem;
     margin: 0;
     background-color: transparent;
-    color: var(--color-on-background);
+    color: var(--custom-prop, #262626);
     border-bottom: 3px solid transparent;
 }
 
