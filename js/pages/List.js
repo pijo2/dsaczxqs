@@ -22,8 +22,14 @@ export default {
         </main>
         <main v-else class="page-list">
             <div class="list-container">
-                <table class="list" v-if="list">
-                    <tr v-for="([level, err], i) in list">
+                <input
+                    v-model="search"
+                    type="search"
+                    placeholder="Search levels..."
+                    class="search"
+                />
+                <table class="list" v-if="filteredList.length">
+                    <tr v-for="([level, err], i) in filteredList" :key="level?.id || i">
                         <td class="rank">
                             <p v-if="i + 1 <= 150" class="type-label-lg">#{{ i + 1 }}</p>
                             <p v-else class="type-label-lg">Legacy</p>
@@ -35,6 +41,7 @@ export default {
                         </td>
                     </tr>
                 </table>
+                <p v-else>No levels found.</p>
             </div>
             <div class="level-container">
                 <div class="level" v-if="level">
@@ -60,7 +67,7 @@ export default {
                     <p v-else-if="selected +1 <= 150"><strong>100%</strong> or better to qualify</p>
                     <p v-else>This level does not accept new records.</p>
                     <table class="records">
-                        <tr v-for="record in level.records" class="record">
+                        <tr v-for="record in level.records" class="record" :key="record.user + record.percent">
                             <td class="percent">
                                 <p>{{ record.percent }}%</p>
                             </td>
@@ -83,7 +90,7 @@ export default {
             <div class="meta-container">
                 <div class="meta">
                     <div class="errors" v-show="errors.length > 0">
-                        <p class="error" v-for="error of errors">{{ error }}</p>
+                        <p class="error" v-for="error of errors" :key="error">{{ error }}</p>
                     </div>
                     <div class="og">
                         <p class="type-label-md">Website layout made by <a href="https://tsl.pages.dev/" target="_blank">TheShittyList</a></p>
@@ -91,7 +98,7 @@ export default {
                     <template v-if="editors">
                         <h3>List Editors</h3>
                         <ol class="editors">
-                            <li v-for="editor in editors">
+                            <li v-for="editor in editors" :key="editor.name">
                                 <img :src="\`/assets/\${roleIconMap[editor.role]}\${store.dark ? '-dark' : ''}.svg\`" :alt="editor.role">
                                 <a v-if="editor.link" class="type-label-lg link" target="_blank" :href="editor.link">{{ editor.name }}</a>
                                 <p v-else>{{ editor.name }}</p>
@@ -134,15 +141,16 @@ export default {
         selected: 0,
         errors: [],
         roleIconMap,
-        store
+        store,
+        search: "",
     }),
     computed: {
         level() {
-            return this.list[this.selected][0];
+            return this.filteredList[this.selected]?.[0];
         },
         video() {
-            if (!this.level.showcase) {
-                return embed(this.level.verification);
+            if (!this.level?.showcase) {
+                return embed(this.level?.verification);
             }
 
             return embed(
@@ -151,6 +159,21 @@ export default {
                     : this.level.verification
             );
         },
+        filteredList() {
+            if (!this.search) return this.list;
+            const searchLower = this.search.toLowerCase();
+            return this.list.filter(([level]) => {
+                if (!level) return false;
+                return level.name.toLowerCase().includes(searchLower);
+            });
+        },
+    },
+    watch: {
+        filteredList(newList) {
+            if (newList.length > 0) {
+                this.selected = 0;
+            }
+        }
     },
     async mounted() {
         // Hide loading spinner
