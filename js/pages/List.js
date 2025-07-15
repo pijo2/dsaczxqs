@@ -135,17 +135,11 @@ export default {
         errors: [],
         roleIconMap,
         store,
-        searchQuery: '',
     }),
     computed: {
         level() {
             return this.list[this.selected][0];
         },
-         filteredList() {
-    if (!this.searchQuery) return this.list;
-    return this.list.filter(level =>
-      level.name.toLowerCase().includes(this.searchQuery.toLowerCase())
-         },
         video() {
             if (!this.level.showcase) {
                 return embed(this.level.verification);
