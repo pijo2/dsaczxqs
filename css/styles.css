@@ -12,6 +12,6 @@
 
 .search:focus {
   outline: none;
-  border-color: #007bff;
+  border-color: #292929;
   box-shadow: 0 0 5px rgba(38, 38, 38, 1);
 }
