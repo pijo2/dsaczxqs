@@ -75,5 +75,20 @@
             </nav>
         </header>
         <router-view :class="{ dark: store.dark }"></router-view>
+        <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const searchInput = document.querySelector('.search-bar input');
+    const levelList = document.querySelectorAll('.list > div');
+
+    searchInput.addEventListener('input', () => {
+      const searchTerm = searchInput.value.toLowerCase();
+
+      levelList.forEach(level => {
+        const text = level.textContent.toLowerCase();
+        level.style.display = text.includes(searchTerm) ? '' : 'none';
+      });
+    });
+  });
+</script>
     </body>
 </html>
