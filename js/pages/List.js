@@ -21,12 +21,6 @@ export default {
             <Spinner></Spinner>
         </main>
         <main v-else class="page-list">
-        <input
-  type="text"
-  v-model="searchQuery"
-  placeholder="Search levels..."
-  class="search-input"
-/>
             <div class="list-container">
                 <table class="list" v-if="list">
                     <tr v-for="([level, err], i) in list">
