@@ -19,6 +19,12 @@
             "link": "https://www.youtube.com/watch?v=zORdqzt3tbs",
             "percent": 100,
             "hz": 240
+        },
+          {
+            "user": "beli",
+            "link": "https://youtu.be/nfBWSfZt44A?si=dlmqBE-lwGrccODx",
+            "percent": 100,
+            "hz": 240
         }
     ]
 }
