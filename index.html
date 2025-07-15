@@ -75,5 +75,38 @@
             </nav>
         </header>
         <router-view :class="{ dark: store.dark }"></router-view>
+        <template>
+  <div>
+    <div class="search-bar">
+      <input v-model="searchTerm" placeholder="Search levels..." />
+    </div>
+    <div class="list">
+      <div v-for="level in filteredLevels" :key="level.id">
+        #{{ level.id }} {{ level.name }}
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      levels: [ /* Twój array z levelami */ ],
+      searchTerm: ''
+    };
+  },
+  computed: {
+    filteredLevels() {
+      if (!this.searchTerm) return this.levels;
+      const term = this.searchTerm.toLowerCase();
+      return this.levels.filter(l =>
+        l.name.toLowerCase().includes(term) ||
+        l.id.toString().includes(term)
+      );
+    }
+  }
+};
+</script>
     </body>
 </html>
