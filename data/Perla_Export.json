@@ -4,15 +4,9 @@
     "author": "yen",
     "creators": ["yen"],
     "verifier": "yen",
-    "verification": "https://www.youtube.com/watch?v=teJS4tRY7cI",
+    "verification": "https://youtu.be/QCI5rytuHgo",
     "percentToQualify": "100",
     "password": "Free To Copy",
     "records": [
-        {
-            "user": "beli",
-            "link": "https://youtu.be/nfBWSfZt44A?si=dlmqBE-lwGrccODx",
-            "percent": 100,
-            "hz": 144
-        }
     ]
 }
