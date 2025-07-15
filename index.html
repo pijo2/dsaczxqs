@@ -75,7 +75,7 @@
             </nav>
         </header>
         <router-view :class="{ dark: store.dark }"></router-view>
-        <template>
+      <template>
   <div>
     <div class="search-bar">
       <input v-model="searchTerm" placeholder="Search levels..." />
@@ -86,27 +86,24 @@
       </div>
     </div>
   </div>
-</template>
+</template>  
+        <script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const input = document.querySelector('.search-bar input');
+    const listContainer = document.querySelector('.list');
 
-<script>
-export default {
-  data() {
-    return {
-      levels: [ /* Twój array z levelami */ ],
-      searchTerm: ''
-    };
-  },
-  computed: {
-    filteredLevels() {
-      if (!this.searchTerm) return this.levels;
-      const term = this.searchTerm.toLowerCase();
-      return this.levels.filter(l =>
-        l.name.toLowerCase().includes(term) ||
-        l.id.toString().includes(term)
-      );
-    }
-  }
-};
+    if (!input || !listContainer) return;
+
+    input.addEventListener('input', () => {
+      const term = input.value.toLowerCase();
+      const items = listContainer.querySelectorAll('div');
+
+      items.forEach(item => {
+        const text = item.textContent.toLowerCase();
+        item.style.display = text.includes(term) ? '' : 'none';
+      });
+    });
+  });
 </script>
     </body>
 </html>
