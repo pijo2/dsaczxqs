@@ -21,6 +21,12 @@ export default {
             <Spinner></Spinner>
         </main>
         <main v-else class="page-list">
+         <input
+    type="text"
+    placeholder="Search levels..."
+    v-model="searchQuery"
+    class="search-input"
+  />
             <div class="list-container">
                 <table class="list" v-if="list">
                     <tr v-for="([level, err], i) in list">
@@ -135,11 +141,17 @@ export default {
         errors: [],
         roleIconMap,
         store,
+        searchQuery: '',
     }),
     computed: {
         level() {
             return this.list[this.selected][0];
         },
+        filteredList() {
+  if (!this.searchQuery) return this.list;
+  const q = this.searchQuery.toLowerCase();
+  return this.list.filter(level => level.name.toLowerCase().includes(q));
+            },
         video() {
             if (!this.level.showcase) {
                 return embed(this.level.verification);
