@@ -93,7 +93,7 @@ export default {
                         <p class="error" v-for="error of errors" :key="error">{{ error }}</p>
                     </div>
                     <template v-if="editors">
-                        <h3>List Editors</h3>
+                        <h3>edytorzy listy</h3>
                         <ol class="editors">
                             <li v-for="editor in editors" :key="editor.name">
                                 <img :src="\`/assets/\${roleIconMap[editor.role]}\${store.dark ? '-dark' : ''}.svg\`" :alt="editor.role">
