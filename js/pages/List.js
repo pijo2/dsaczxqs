@@ -104,25 +104,22 @@ export default {
                     </template>
                     <h3>Zasady dodawania leveli</h3>
                     <p>
-                        Nie można używać hacków. Fps by pass jest dozwolony do 244.
+                        Nie można używać hacków. Fps by pass jest dozwolony do 244fps.
                     </p>
                     <p>
-                        Have either source audio or clicks/taps in the video. Edited audio only does not count
+                        Nagranie musi posiadać clicki lub tapy.
                     </p>
                     <p>
-                        The recording must have a previous attempt and entire death animation shown before the completion, unless the completion is on the first attempt. Everyplay records are exempt from this
+                        nagranie musi pokazywać całe przejście i poprzedni death.
                     </p>
                     <p>
-                        The recording must also show the player hit the endwall, or the completion will be invalidated.
+                        na nagraniu musi widnieć endscreen
                     </p>
                     <p>
-                        Do not use secret routes or bug routes
+                        Nie można uzywać secret way i swag routów.
                     </p>
                     <p>
-                        Do not use easy modes, only a record of the unmodified level qualifies
-                    </p>
-                    <p>
-                        Once a level falls onto the Legacy List, we accept records for it for 24 hours after it falls off, then afterwards we never accept records for said level
+                        Jeżeli level spadnie do legacy nie akceptujemy nagrania.
                     </p>
                 </div>
             </div>
