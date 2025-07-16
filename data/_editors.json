@@ -5,7 +5,7 @@
         "link": "https://www.youtube.com/@krzaczek1234"
     },
     {
-        "role": "admin",
+        "role": "owner",
         "name": "Smiley",
         "link": "https://www.youtube.com/@SmileyGamin-g"
     },
@@ -13,5 +13,11 @@
         "role": "dev",
         "name": "Krzak",
         "link": "https://www.youtube.com/@krzaczek1234"
+    },
+     {
+        "role": "admin",
+        "name": "dqwidekk",
+        "link": "https://www.youtube.com/@Pan_Y_Y"
     }
+    
 ]
