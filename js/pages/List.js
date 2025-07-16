@@ -102,7 +102,7 @@ export default {
                             </li>
                         </ol>
                     </template>
-                    <h3>Submission Requirements</h3>
+                    <h3>Zasady dodawania leveli</h3>
                     <p>
                         Nie można używać hacków. Fps by pass jest dozwolony do 244.
                     </p>
