@@ -25,7 +25,7 @@ export default {
                 <input
                     v-model="search"
                     type="search"
-                    placeholder="Search levels..."
+                    placeholder="Szukaj poziomów..."
                     class="search"
                 />
                 <table class="list" v-if="filteredList.length">
