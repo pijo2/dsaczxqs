@@ -121,6 +121,9 @@ export default {
                     <p>
                         Jeżeli level spadnie do legacy nie akceptujemy nagrania.
                     </p>
+                    <p>
+                        Level musi mieć ponizej 31sekund.
+                    </p>
                 </div>
             </div>
         </main>
