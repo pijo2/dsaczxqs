@@ -13,6 +13,12 @@
             "link": "https://www.youtube.com/watch?v=XmN9Pp87Syo",
             "percent": 100,
             "hz": 240
+        },
+              {
+            "user": "Krzak",
+            "link": "https://youtu.be/a8vsv6KwVuk",
+            "percent": 100,
+            "hz": 144
         }
     ]
 }
