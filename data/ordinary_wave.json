@@ -21,8 +21,14 @@
         "hz": 288
         },
             {
-                    "user": "OPKING",
+        "user": "OPKING",
         "link": "https://www.youtube.com/watch?v=4oNdQ_p1yqg", 
+        "percent": 100,
+        "hz": 240
+            },
+             {
+        "user": "janghyun",
+        "link": "https://www.youtube.com/watch?v=yhqOGc1Xe7c", 
         "percent": 100,
         "hz": 240
             }
