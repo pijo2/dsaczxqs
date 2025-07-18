@@ -19,6 +19,12 @@
         "link": "https://youtu.be/ySqhjvSF9jY?si=De66z-odAoHKO4Go", 
         "percent": 100,
         "hz": 288
-        } 
+        },
+            {
+                    "user": "OPKING",
+        "link": "https://www.youtube.com/watch?v=4oNdQ_p1yqg", 
+        "percent": 100,
+        "hz": 240
+            }
     ]
 }
