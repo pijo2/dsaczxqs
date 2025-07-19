@@ -7,6 +7,12 @@
     "verification": "https://www.youtube.com/watch?v=JV9pojoMKJU",
     "percentToQualify": "100",
     "password": "Free To Copy",
-    "records": [  
+    "records": [
+        {
+            "user": "Komet01",
+            "link": "https://www.youtube.com/watch?v=ZIkvFqMwp8U",
+            "percent": 100,
+            "hz": 240
+        }
     ]
 }
