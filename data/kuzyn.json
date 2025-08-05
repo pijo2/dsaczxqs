@@ -55,6 +55,13 @@
             "link": "https://www.youtube.com/watch?v=DjhMxy5lnt8",
             "percent": 100,
             "hz": 240
+        },
+        {
+            "user": "Red Koneko",
+            "link": "https://www.youtube.com/watch?v=9AWqhUOVWxQ",
+            "percent": 100,
+            "hz": 60
         }
+    ]
     ]
 }
