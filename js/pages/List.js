@@ -104,7 +104,10 @@ export default {
                     </template>
                     <h3>Zasady dodawania leveli</h3>
                     <p>
-                        Nie można używać hacków. Fps by pass jest dozwolony do 244fps.
+                        Nie można używać hacków.
+                    </p>
+                    <p>
+                        Cbf jest dozwolony poniżej 144 fps/hz
                     </p>
                     <p>
                         Nagranie musi posiadać clicki lub tapy.
