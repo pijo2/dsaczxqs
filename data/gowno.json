@@ -8,5 +8,11 @@
     "percentToQualify": "100",
     "password": "Free To Copy",
     "records": [
+                {
+            "user": "bumper",
+            "link": "https://www.youtube.com/watch?v=1arm60MQlRE",
+            "percent": 100,
+            "hz": 360
+        }
     ]
 }
