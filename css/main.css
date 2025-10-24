@@ -66,3 +66,22 @@ header {
   background-color: var(--color-primary);
   color: var(--color-on-primary);
 }
+
+/* === Footer fix === */
+footer {
+  background-color: var(--color-background);
+  color: var(--color-on-background);
+  padding: 1rem;
+  text-align: center;
+}
+
+/* === HTML background fix === */
+html {
+  background-color: var(--color-background);
+}
+
+/* === Main content fix === */
+main > div {
+  background-color: var(--color-background);
+  overflow-y: auto;
+}
