@@ -8,5 +8,10 @@
     "percentToQualify": "100",
     "password": "Free To Copy",
     "records": [
-    ]
+    ]   {
+            "user": "FranekGMD",
+            "link": "https://youtu.be/8laxGeqmFDQ",
+            "percent": 100,
+            "hz": 144
+        }
 }
