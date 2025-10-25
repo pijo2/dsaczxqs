@@ -1,1 +1,88 @@
-:root { --color-background: white; --color-on-background: black; --color-background-hover: #ababab; --color-on-background-hover: black; --color-primary: black; --color-on-primary: white; --color-error: #de0000; --color-on-error: white; } main.dark, header.dark { color-scheme: dark; --color-background: #1f1f1f; --color-on-background: white; --color-background-hover: #ababab; --color-on-background-hover: white; --color-primary: black; --color-primary-disabled: #1f213c; --color-on-primary: white; --color-error: #de0000; --color-on-error: white; } html, body { height: 100%; } body { display: flex; flex-direction: column; margin: 0; } header, main { background-color: var(--color-background); color: var(--color-on-background); display: grid; grid-template-columns: minmax(16rem, 1fr) minmax(16rem, 2fr) minmax( 16em, 1fr ); column-gap: 2rem; } header { display: flex; padding-inline: calc(25vw - 10rem); height: 4rem; background-color: var(--color-primary); color: var(--color-on-primary); }
+@@ -1,87 +1 @@
+/* === Google Font: Orbitron === */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+/* === Zmienne kolorów === */
+:root {
+  --font-main: 'Orbitron', sans-serif;
+
+  --color-background: #ffffff;
+  --color-on-background: #000000;
+  --color-background-hover: #ababab;
+  --color-on-background-hover: #000000;
+
+  --color-primary: #000000;
+  --color-on-primary: #ffffff;
+
+  --color-error: #de0000;
+  --color-on-error: #ffffff;
+}
+
+/* === Dark Mode === */
+main.dark,
+header.dark {
+  color-scheme: dark;
+  --color-background: #1f1f1f;
+  --color-on-background: #ffffff;
+  --color-background-hover: #333333;
+  --color-on-background-hover: #ffffff;
+
+  --color-primary: #000000;
+  --color-primary-disabled: #1f213c;
+  --color-on-primary: #ffffff;
+
+  --color-error: #de0000;
+  --color-on-error: #ffffff;
+}
+
+/* === Global === */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: var(--font-main);
+  background-color: var(--color-background);
+  color: var(--color-on-background);
+  display: flex;
+  flex-direction: column;
+}
+
+/* === Layout === */
+header,
+main {
+  display: grid;
+  grid-template-columns: minmax(16rem, 1fr) minmax(16rem, 2fr) minmax(16em, 1fr);
+  column-gap: 2rem;
+  background-color: var(--color-background);
+  color: var(--color-on-background);
+}
+
+/* === Header === */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: calc(25vw - 10rem);
+  height: 4rem;
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
+}
+
+/* === Footer fix === */
+footer {
+  background-color: var(--color-background);
+  color: var(--color-on-background);
+  padding: 1rem;
+  text-align: center;
+}
+
+/* === HTML background fix === */
+html {
+  background-color: var(--color-background);
+}
+
+/* === Main content fix === */
+main > div {
+  background-color: var(--color-background);
+  overflow-y: auto;
+}
