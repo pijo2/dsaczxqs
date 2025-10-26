@@ -26,17 +26,23 @@
             "percent": 100,
             "hz": 144
         },
-                {
+        {
             "user": "IkukGD",
             "link": "https://youtu.be/rPSaF5XcmFU",
             "percent": 100,
             "hz": 144
         },
-                        {
+        {
             "user": "FranekGMD",
             "link": "https://youtu.be/hmXOoFwsMqg",
             "percent": 100,
             "hz": 144
+        },
+        {
+            "user": "Kuboiks",
+            "link": "https://www.youtube.com/watch?v=q6uprae4Qw8",
+            "percent": 100,
+            "hz": 1080
         }
     ]
 }
