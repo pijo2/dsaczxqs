@@ -43,6 +43,12 @@
             "link": "https://www.youtube.com/watch?v=q6uprae4Qw8",
             "percent": 100,
             "hz": 1080
+        },
+        {
+            "user": "Cinasek",
+            "link": "https://www.youtube.com/watch?v=Oe703aeiQU4",
+            "percent": 100,
+            "hz": 240
         }
     ]
 }
