@@ -55,6 +55,12 @@
             "link": "https://www.youtube.com/watch?v=RsNIT-oLACc",
             "percent": 100,
             "hz": 180
+        },
+          {
+            "user": "BartoszGD",
+            "link": "https://youtu.be/Lc4lbLemG10",
+            "percent": 100,
+            "hz": 180
         }
     ]
 }
