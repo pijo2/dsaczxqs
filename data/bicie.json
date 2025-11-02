@@ -19,6 +19,12 @@
             "link": "https://youtu.be/HB_yNWMv-y0",
             "percent": 100,
             "hz": 60
-        } 
+        },
+        {
+            "user": "Kuboiks",
+            "link": "https://www.youtube.com/watch?v=1xEiqOULnlg",
+            "percent": 100,
+            "hz": 165
+        }
     ]
 }
