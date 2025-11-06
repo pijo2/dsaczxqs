@@ -38,7 +38,7 @@ export default {
                         </tr>
                         <tr>
                             <td class="rank">
-                                <p class="type-label-lg">top {{ i + 1 }}</p>
+                                <span class="type-label-lg">top {{ i + 1 }}</span>
                             </td>
                             <td class="level" :class="{ 'active': selected == i, 'error': !level }">
                                 <button @click="selected = i">
@@ -114,7 +114,7 @@ export default {
                         Nie można używać hacków.
                     </p>
                     <p>
-                        Cbf jest dozwolony poniżej 144 fps/hz
+                        Cbf jest dozwolony
                     </p>
                     <p>
                         Nagranie musi posiadać clicki lub tapy.
