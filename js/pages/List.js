@@ -51,7 +51,7 @@ export default {
                     <ul class="stats">
                         <li>
                             <div class="type-title-sm">Points when completed</div>
-                            <p>{{ level.rank >= 50 ? 0 : score(level.rank, 50, level.percentToQualify) }}</p>
+                            <p>{{ level.rank >= 50 ? 0 : score(level.rank, 150, level.percentToQualify) }}</p>
 
                         </li>
                         <li>
