@@ -38,7 +38,7 @@ export default {
                         </tr>
                         <tr>
                             <td class="rank">
-                                <span class="type-label-lg">top {{ i + 1 }}</span>
+                                <span class="type-label-lg">top {{ level.rank }}</span>
                             </td>
                             <td class="level" :class="{ 'active': selected == i, 'error': !level }">
                                 <button @click="selected = i">
