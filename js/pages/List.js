@@ -29,18 +29,24 @@ export default {
                     class="search"
                 />
                 <table class="list" v-if="filteredList.length">
-                    <tr v-for="([level, err], i) in filteredList" :key="level?.id || i">
-                        <td class="rank">
-                            <p v-if="i + 1 <= 75" class="type-label-lg">#{{ i + 1 }}</p>
-                            <p v-else-if="i + 1 <= 150" class="type-label-lg">Extended</p>
-                            <p v-else class="type-label-lg">Legacy</p>
-                        </td>
-                        <td class="level" :class="{ 'active': selected == i, 'error': !level }">
-                            <button @click="selected = i">
-                                <span class="type-label-lg">{{ level?.name || \`Error (\${err}.json)\` }}</span>
-                            </button>
-                        </td>
-                    </tr>
+                    <template v-for="([level, err], i) in filteredList" :key="level?.id || i">
+                        <tr v-if="i + 1 === 76">
+                            <td colspan="2" class="type-label-lg" style="text-align: center;">--extended--</td>
+                        </tr>
+                        <tr v-if="i + 1 === 151">
+                            <td colspan="2" class="type-label-lg" style="text-align: center;">--legacy--</td>
+                        </tr>
+                        <tr>
+                            <td class="rank">
+                                <p class="type-label-lg">top {{ i + 1 }}</p>
+                            </td>
+                            <td class="level" :class="{ 'active': selected == i, 'error': !level }">
+                                <button @click="selected = i">
+                                    <span class="type-label-lg">{{ level?.name || \`Error (\${err}.json)\` }}</span>
+                                </button>
+                            </td>
+                        </tr>
+                    </template>
                 </table>
                 <p v-else>No levels found.</p>
             </div>
