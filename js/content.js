@@ -89,8 +89,7 @@ export async function fetchLeaderboard() {
                 completed.push({
                     rank: rank + 1,
                     level: level.name,
-                    score: rank + 1 >= 50 ? 0 : score(rank + 1, 100, level.percentToQualify),
-
+                    score: score(rank + 1, 100, level.percentToQualify),
                     link: record.link,
                 });
                 return;
@@ -100,7 +99,7 @@ export async function fetchLeaderboard() {
                 rank: rank + 1,
                 level: level.name,
                 percent: record.percent,
-                score: rank + 1 >= 50 ? 0 : score(rank + 1, record.percent, level.percentToQualify),
+                score: score(rank + 1, record.percent, level.percentToQualify),
                 link: record.link,
             });
         });
