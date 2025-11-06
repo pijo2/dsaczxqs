@@ -30,10 +30,10 @@ export default {
                 />
                 <table class="list" v-if="filteredList.length">
                     <template v-for="([level, err], i) in filteredList" :key="level?.id || i">
-                        <tr v-if="i + 1 === 76">
+                        <tr v-if="level.rank === 76">
                             <td colspan="2" class="type-label-lg" style="text-align: center;">--extended--</td>
                         </tr>
-                        <tr v-if="i + 1 === 151">
+                        <tr v-if="level.rank === 151">
                             <td colspan="2" class="type-label-lg" style="text-align: center;">--legacy--</td>
                         </tr>
                         <tr>
@@ -58,7 +58,7 @@ export default {
                     <ul class="stats">
                         <li>
                             <div class="type-title-sm">Points when completed</div>
-                            <p>{{ score(selected + 1, 100, level.percentToQualify) }}</p>
+                            <p>{{ score(level.rank, 100, level.percentToQualify) }}</p>
                         </li>
                         <li>
                             <div class="type-title-sm">ID</div>
@@ -70,8 +70,8 @@ export default {
                         </li>
                     </ul>
                     <h2>Records</h2>
-                    <p v-if="selected + 1 <= 75"><strong>{{ level.percentToQualify }}%</strong> or better to qualify</p>
-                    <p v-else-if="selected + 1 <= 150"><strong>100%</strong> or better to qualify</p>
+                    <p v-if="level.rank <= 75"><strong>{{ level.percentToQualify }}%</strong> or better to qualify</p>
+                    <p v-else-if="level.rank <= 150"><strong>100%</strong> or better to qualify</p>
                     <p v-else>This level does not accept new records.</p>
                     <table class="records">
                         <tr v-for="record in level.records" class="record" :key="record.user + record.percent">
@@ -110,33 +110,15 @@ export default {
                         </ol>
                     </template>
                     <h3>Zasady dodawania leveli</h3>
-                    <p>
-                        Nie można używać hacków.
-                    </p>
-                    <p>
-                        Cbf jest dozwolony
-                    </p>
-                    <p>
-                        Nagranie musi posiadać clicki lub tapy.
-                    </p>
-                    <p>
-                        nagranie musi pokazywać całe przejście i poprzedni death.
-                    </p>
-                    <p>
-                        na nagraniu musi widnieć endscreen
-                    </p>
-                    <p>
-                        Nie można uzywać secret way i swag routów.
-                    </p>
-                    <p>
-                        Jeżeli level spadnie do legacy nie akceptujemy nagrania.
-                    </p>
-                    <p>
-                        Level musi mieć ponizej 31sekund.
-                    </p>
-                    <p>
-                        minimalne deco levela tak jak na schabek challange.
-                    </p>
+                    <p>Nie można używać hacków.</p>
+                    <p>Cbf jest dozwolony</p>
+                    <p>Nagranie musi posiadać clicki lub tapy.</p>
+                    <p>nagranie musi pokazywać całe przejście i poprzedni death.</p>
+                    <p>na nagraniu musi widnieć endscreen</p>
+                    <p>Nie można uzywać secret way i swag routów.</p>
+                    <p>Jeżeli level spadnie do legacy nie akceptujemy nagrania.</p>
+                    <p>Level musi mieć ponizej 31sekund.</p>
+                    <p>minimalne deco levela tak jak na schabek challange.</p>
                 </div>
             </div>
         </main>
@@ -183,22 +165,16 @@ export default {
         }
     },
     async mounted() {
-        // Hide loading spinner
         this.list = await fetchList();
         this.editors = await fetchEditors();
 
-        // Error handling
         if (!this.list) {
-            this.errors = [
-                "Failed to load list. Retry in a few minutes or notify list staff.",
-            ];
+            this.errors = ["Failed to load list. Retry in a few minutes or notify list staff."];
         } else {
             this.errors.push(
                 ...this.list
                     .filter(([_, err]) => err)
-                    .map(([_, err]) => {
-                        return `Failed to load level. (${err}.json)`;
-                    })
+                    .map(([_, err]) => `Failed to load level. (${err}.json)`)
             );
             if (!this.editors) {
                 this.errors.push("Failed to load list editors.");
