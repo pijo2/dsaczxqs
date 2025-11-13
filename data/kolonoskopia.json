@@ -8,5 +8,11 @@
     "percentToQualify": "100",
     "password": "Free To Copy",
     "records": [
+                {
+            "user": "szymek",
+            "link": "https://www.youtube.com/watch?v=_bxTh_qF0lk",
+            "percent": 100,
+            "hz": 240
+        }
     ]
 }
