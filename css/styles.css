@@ -23,7 +23,7 @@
       border: 0.25em solid var(--glow-color);
       padding: 1em 3em;
       color: var(--glow-color);
-      font-size: 40px;
+      font-size: 10px;
       font-weight: bold;
       cursor: pointer;
       background-color: var(--btn-color);
