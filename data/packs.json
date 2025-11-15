@@ -1,0 +1,16 @@
+[
+  {
+    "id": "hell_pack",
+    "name": "Hell Pack",
+    "color": "#d92b2b",
+    "levels": [147,301,98],
+    "description": "Hard hell pack picked by staff."
+  },
+  {
+    "id": "temple_pack_1",
+    "name": "Temple Pack 1",
+    "color": "#d0a318",
+    "levels": [51,12,266],
+    "description": "Temple themed levels."
+  }
+]
