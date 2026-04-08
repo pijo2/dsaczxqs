@@ -1,7 +1,7 @@
 [
     {
         "role": "owner",
-        "name": "Krzak",
+        "name": "pijo2",
         "link": "https://www.youtube.com/@krzaczek1234"
     },
        {
@@ -11,13 +11,8 @@
     },
     {
         "role": "dev",
-        "name": "Krzak",
+        "name": "pijo2",
         "link": "https://www.youtube.com/@krzaczek1234"
     },
-     {
-        "role": "admin",
-        "name": "Yen",
-        "link": "https://www.youtube.com/channel/UCYNQHRAVDaQj0sHjc1fzhyw"
-    }
     
 ]
