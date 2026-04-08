@@ -128,7 +128,6 @@ export default {
                         Level musi mieć ponizej 31sekund.
                     </p>
                        <p>
-                        minimalne deco levela tak jak na schabek challange.
                     </p>
                 </div>
             </div>
