@@ -19,6 +19,13 @@
             "link": "https://youtu.be/HB_yNWMv-y0",
             "percent": 100,
             "hz": 60
+        },
+                {
+        "user": "pijo2",
+        "link": "https://www.youtube.com/watch?v=fzMUo0riGh0", 
+        "percent": 100,
+        "hz": 288
         }
+    
     ]
 }
